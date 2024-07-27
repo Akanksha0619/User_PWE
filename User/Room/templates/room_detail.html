@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+<div style="padding: 20px;">
+    <h2>Room {{ room.room_number }}</h2>
+    {% if room.image %}
+    <img src="{{ room.image.url }}" alt="Room image" style="max-width: 100%; height: auto; border-radius: 8px; margin-bottom: 20px;">
+    {% endif %}
+    <p>Type: {{ room.get_room_type_display }}</p>
+    <p>Capacity: {{ room.capacity }}</p>
+    <p>Price per month: ₹{{ room.price_per_month }}</p>
+    <p>Amenities: {{ room.amenities }}</p>
+    <p>Availability: {{ room.available|yesno:"Available,Not Available" }}</p>
+    {% if room.available %}
+    <a href="{% url 'book_room' room.id %}" style="display: inline-block; padding: 10px 20px; background-color: #8E235C; color: white; border-radius: 4px; text-decoration: none;">Book Now</a>
+    {% else %}
+    <p style="color: red;">This room is not available for booking.</p>
+    {% endif %}
+</div>
+{% endblock %}

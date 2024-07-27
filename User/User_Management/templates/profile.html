@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div style="display: flex; justify-content: center; align-items: center; min-height: calc(100vh - 160px); padding: 20px; background-color: #f4f4f4; font-family: 'Roboto', sans-serif; margin-top: 80px; margin-bottom: 80px;">
+    <div style="max-width: 800px; width: 100%; padding: 40px; border: 1px solid #ddd; border-radius: 12px; background-color: #ffffff; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); text-align: center;">
+        <h1 style="color: #8E235C; margin-bottom: 30px; font-size: 24px;">{{ profile.user.username }}'s Profile</h1>
+
+        {% if profile.profile_picture %}
+            <img src="{{ profile.profile_picture.url }}" alt="Profile Picture" style="width: 150px; height: 150px; border-radius: 50%; margin-bottom: 20px;">
+        {% else %}
+            <img src="{% static 'default.jpg' %}" alt="Default Profile Picture" style="width: 150px; height: 150px; border-radius: 50%; margin-bottom: 20px;">
+        {% endif %}
+
+        <p style="font-size: 18px; color: #333;"><strong>Room Number:</strong> {{ profile.room_number }}</p>
+        <p style="font-size: 18px; color: #333;"><strong>Bed Number:</strong> {{ profile.bed_number }}</p>
+        <p style="font-size: 18px; color: #333;"><strong>Mobile Number:</strong> {{ profile.mobile_number }}</p>
+        <p style="font-size: 18px; color: #333;"><strong>Bio:</strong> {{ profile.bio }}</p>
+
+        {% if profile.aadhar_card %}
+            <p style="font-size: 18px; color: #333;"><a href="{{ profile.aadhar_card.url }}" style="color: #8E235C; text-decoration: none;">Aadhar Card</a></p>
+        {% endif %}
+
+        {% if profile.pan_card %}
+            <p style="font-size: 18px; color: #333;"><a href="{{ profile.pan_card.url }}" style="color: #8E235C; text-decoration: none;">PAN Card</a></p>
+        {% endif %}
+
+        <a href="{% url 'update_profile' %}" style="display: inline-block; padding: 10px 20px; margin-top: 20px; background-color: #8E235C; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 16px; font-weight: bold; text-decoration: none; transition: background-color 0.3s ease, box-shadow 0.3s ease; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+            Edit Profile
+        </a>
+    </div>
+</div>
+{% endblock %}
