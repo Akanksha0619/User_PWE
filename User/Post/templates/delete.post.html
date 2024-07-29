@@ -1,5 +1,9 @@
 {% extends 'base.html' %}
-
+{% block breadcrumb_items %}
+    <!-- Add specific breadcrumb items for this page -->
+    <li class="breadcrumb-item"><a href="{% url 'create_post' %}">Create_post</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Delete_Post</li>
+{% endblock %}
 {% block content %}
 <h2>Delete Post: {{ post.title }}</h2>
 <form method="post">

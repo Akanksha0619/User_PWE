@@ -1,3 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Form{% endblock %}</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f7f7f7;
+            font-family: Arial, sans-serif;
+        }
+        .form-container {
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .form-header {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .form-group label {
+            font-weight: bold;
+        }
+        .form-control {
+            border-radius: 20px;
+        }
+        .btn-custom {
+            background-color: #4267B2;
+            color: #fff;
+            border-radius: 20px;
+            padding: 10px 20px;
+        }
+        .btn-custom:hover {
+            background-color: #365899;
+        }
+    </style>
+</head>
+<body>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -303,7 +354,7 @@
 </head>
 <body>
 <header>
-  <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 border-bottom">
+<nav class="navbar navbar-expand-lg navbar-light bg-white px-4 border-bottom">
     <div class="container-fluid">
         <a class="navbar-brand" href="#"><h2>PWE</h2></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -312,51 +363,52 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-end">
                 {% if user.is_authenticated %}
-                      <li class="nav-item">
-                        <a class="nav-link" href="{% url 'index' %}" tabindex="-1" aria-disabled="true">Home</a>
-                    </li>  
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'profile' %}" tabindex="-1" aria-disabled="true">Profile</a>
+                        <a class="nav-link" href="{% url 'index' %}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'post_list' %}" tabindex="-1" aria-disabled="true">Explore</a>
+                        <a class="nav-link" href="{% url 'profile' %}">Profile</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="{% url 'room_list' %}" tabindex="-1" aria-disabled="true">Room_list</a>
+                        <a class="nav-link" href="{% url 'post_list' %}">Explore</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'logout' %}" tabindex="-1" aria-disabled="true">Logout</a>
+                        <a class="nav-link" href="{% url 'room_list' %}">Rooms</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'logout' %}">Logout</a>
                     </li>
                 {% else %}
-                       <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#room">Rooms</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#facilities" tabindex="-1" aria-disabled="true">Facilities</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#pricing" tabindex="-1" aria-disabled="true">Pricing</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#testimonials" tabindex="-1" aria-disabled="true">Testimonial</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#about" tabindex="-1" aria-disabled="true">About</a>
-                </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'register' %}" tabindex="-1" aria-disabled="true">Register</a>
+                        <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'login' %}" tabindex="-1" aria-disabled="true">Login</a>
+                        <a class="nav-link" href="#room">Rooms</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#facilities">Facilities</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#pricing">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonials">Testimonials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'register' %}">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'login' %}">Login</a>
                     </li>
                 {% endif %}
             </ul>
         </div>
     </div>
 </nav>
+
 
 
    <!-- Breadcrumbs Section -->

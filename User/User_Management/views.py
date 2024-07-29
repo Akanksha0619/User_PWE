@@ -1,9 +1,12 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login as auth_login
 from .forms import RegisterForm, LoginForm
-from django.contrib.auth.decorators import login_required
 from .forms import ProfileUpdateForm
 from django.urls import reverse
+from django.shortcuts import render, get_object_or_404
+from django.contrib.auth.decorators import login_required
+from .models import Profile
+from django.contrib import messages
 
 
 def register(request):
@@ -69,9 +72,10 @@ def profile(request):
     }
     return render(request, 'profile.html', context)
 
-from django.shortcuts import render, get_object_or_404
-from django.contrib.auth.decorators import login_required
-from .models import Profile
+
+def logout(request):
+    messages.info(request, 'you have logged out.')
+    return redirect('index')
 
 @login_required
 def profile(request):
@@ -85,12 +89,3 @@ def profile(request):
         'profile': profile,
     }
     return render(request, 'profile.html', context)
-
-from django.urls import path
-from django.contrib.auth.views import LogoutView
-from . import views
-
-urlpatterns = [
-    # Other URL patterns
-    path('logout/', LogoutView.as_view(), name='logout'),
-]

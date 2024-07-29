@@ -1,4 +1,8 @@
 {% extends 'base.html' %}
+{% block breadcrumb_items %}
+    <!-- Add specific breadcrumb items for this page -->
+    <li class="breadcrumb-item active" aria-current="page"> Room_List</li>
+{% endblock %}
 {% block content %}
 <div style="display: flex; flex-wrap: wrap; justify-content: space-around; margin-top: 20px;">
     {% for room in rooms %}
