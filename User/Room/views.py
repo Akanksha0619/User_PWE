@@ -25,3 +25,4 @@ def book_room(request, room_id):
     else:
         form = BookingForm()
     return render(request, 'book_room.html', {'form': form, 'room': room})
+

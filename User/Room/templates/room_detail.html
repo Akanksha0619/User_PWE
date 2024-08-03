@@ -5,6 +5,10 @@
     <li class="breadcrumb-item active" aria-current="page">Room_detail</li>
 {% endblock %}
 {% block content %}
+<div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+            <h6 class="section-title text-center text-uppercase" style="color: #FD7792;">Room Detail</h6>
+            <h1 class="mb-5">Luxury <span class="text-uppercase" style="color: #FD7792;"> Room Detail</span></h1>
+        </div>
 <div style="display: flex; justify-content: center; align-items: center; padding: 20px; margin: 40px 0;">
     <div style="text-align: center; max-width: 600px; width: 100%;">
         <h2>Room {{ room.room_number }}</h2>
@@ -17,7 +21,7 @@
         <p>Amenities: {{ room.amenities }}</p>
         <p>Availability: {{ room.available|yesno:"Available,Not Available" }}</p>
         {% if room.available %}
-        <a href="{% url 'book_room' room.id %}" style="display: inline-block; padding: 10px 20px; background-color: #8E235C; color: white; border-radius: 4px; text-decoration: none;">Book Now</a>
+        <a href="{% url 'book_room' room.id %}" style="display: inline-block; padding: 10px 20px; background-color: #FD7792; color: white; border-radius: 4px; text-decoration: none;">Book Now</a>
         {% else %}
         <p style="color: red;">This room is not available for booking.</p>
         {% endif %}

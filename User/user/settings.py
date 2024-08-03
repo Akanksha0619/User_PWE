@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-ixy$!hu#4m7hl2(6u=%t3j*4&3esh*n3h@h%)^pc9n=de8!a4#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS =  ['6fe2-122-168-242-188.ngrok-free.app', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS =  ['6639-2401-4900-1c18-393a-85af-eff0-506c-a7c6.ngrok-free.app' , 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -146,4 +146,22 @@ SESSION_COOKIE_DOMAIN = None
 CSRF_COOKIE_SECURE = False
 CSRF_TRUSTED_ORIGINS = ['https://*.ngrok-free.app', 'http://52.66.240.97']
 
+import os
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+]
+
+# During development, ensure DEBUG is set to True
+DEBUG = True
+
+# For production, use a proper static files storage and configuration
+# Example:
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# DEBUG = False
 

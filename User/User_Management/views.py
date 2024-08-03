@@ -89,3 +89,13 @@ def profile(request):
         'profile': profile,
     }
     return render(request, 'profile.html', context)
+
+def about(request):
+    return render(request, 'about.html')
+
+def contact(request):
+    return render(request, 'contact.html')
+
+def service(request):
+    return render(request, 'service.html')
+

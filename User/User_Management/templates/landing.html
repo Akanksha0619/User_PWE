@@ -3,522 +3,477 @@
 {% load static %}
 
 {% block content %}
-
-
-<section id='home' class="rooms my-2 py-1 bg-light">
-    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
+<!-- Carousel Start -->
+<div class="container-fluid p-0 mb-5">
+    <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="{% static 'css/image/front1.jpg' %}" class="d-block w-100" alt="front1">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>First slide label</h5>
-                    <p>Some representative placeholder content for the first slide.</p>
+                <img class="w-100" src="static/img/room-1.jpg" alt="Image">
+                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                    <div class="p-3" style="max-width: 700px;">
+                        <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">PWE</h6>
+                        <h1 class="display-3 text-white mb-4 animated slideInDown">Discover A Brand Luxurious PG</h1>
+
+                    </div>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="{% static 'css/image/front4.jpg' %}" class="d-block w-100" alt="front2">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Second slide label</h5>
-                    <p>Some representative placeholder content for the second slide.</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="{% static 'css/image/front3.jpg' %}" class="d-block w-100" alt="front3">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Third slide label</h5>
-                    <p>Some representative placeholder content for the third slide.</p>
+                <img class="w-100" src="static/img/carousel-1.jpg" alt="Image">
+                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                    <div class="p-3" style="max-width: 700px;">
+                        <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">PWE</h6>
+                        <h1 class="display-3 text-white mb-4 animated slideInDown">Discover A Brand Luxurious PG</h1>
+                    </div>
                 </div>
             </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel"
+            data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <button class="carousel-control-next" type="button" data-bs-target="#header-carousel"
+            data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
     </div>
-</section>
+</div>
+<!-- Carousel End -->
 
-<section id='room' class="rooms my-5 py-5 bg-light">
+
+<!-- About Start -->
+<div class="container-xxl py-5">
     <div class="container">
-        <div class="text-center mb-4" style="background-color: #8E235C; color: white; padding: 10px; border-radius: 5px;">
-            <h1 class="text-white">Rooms Section</h1>
-            <hr class="w-25 m-auto" style="border-top: 2px solid white;">
-        </div>
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-6">
+                <h6 class="section-title text-start  text-uppercase">About Us</h6>
+                <h1 class="mb-4">Welcome to <span class=" text-uppercase">PWE</span></h1>
+                <p class="mb-4">Welcome to PWE! We provide a safe, comfortable, and homely environment for girls. Located in a prime, secure neighborhood, our PG offers spacious, well-furnished rooms with modern amenities, nutritious home-cooked meals, and 24/7 security. Enjoy high-speed Wi-Fi, regular housekeeping, and a range of facilities including laundry services and common lounges. We foster a vibrant community where you can make lasting friendships and focus on your personal growth. Join us at PWE and experience a home away from home. </p>
+                <div class="row g-3 pb-4">
+                    <div class="col-sm-4 wow fadeIn" data-wow-delay="0.1s">
+                        <div class="border rounded p-1">
+                            <div class="border rounded text-center p-4">
+                                <i class="fa fa-hotel fa-2x  mb-2" style="color: #FD7792;"></i>
+                                <h2 class="mb-1" data-toggle="counter-up">1234</h2>
+                                <p class="mb-0">Rooms</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 wow fadeIn" data-wow-delay="0.3s">
+                        <div class="border rounded p-1">
+                            <div class="border rounded text-center p-4">
+                                <i class="fa fa-users-cog fa-2x  mb-2" style="color: #FD7792;"></i>
+                                <h2 class="mb-1" data-toggle="counter-up">1234</h2>
+                                <p class="mb-0">Staffs</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 wow fadeIn" data-wow-delay="0.5s">
+                        <div class="border rounded p-1">
+                            <div class="border rounded text-center p-4">
+                                <i class="fa fa-users fa-2x  mb-2" style="color: #FD7792;" ></i>
+                                <h2 class="mb-1" data-toggle="counter-up">1234</h2>
+                                <p class="mb-0">Clients</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="btn btn-primary py-3 px-5 mt-2" href="" style="background-color: #FD7792; border-color: #FD7792;">Explore More</a>
 
-        <div class="row justify-content-center">
-            <div class="col-md-4 mb-4">
-                <div class="card border-0 shadow-sm rounded position-relative overflow-hidden" style="transition: transform 0.3s ease;">
-                    <img src="{% static 'css/image/room1.jpg' %}" class="card-img-top" alt="room1">
-                    <div class="card-body">
-                        <h5 class="card-title">Single-Occupancy Room</h5>
-                        <p class="card-text">A comfortable room designed for single occupancy, offering all essential amenities for a pleasant stay.</p>
-                        <a href="#" class="btn btn-primary" style="background-color: #8E235C; border-color: #8E235C;">Inquire Now</a>
-                    </div>
-                    <div class="card-overlay position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-0 d-flex align-items-center justify-content-center text-white" style="transition: opacity 0.3s ease;">
-                        <p class="m-0">Explore the Single-Occupancy Room</p>
-                    </div>
-                </div>
             </div>
-            <div class="col-md-4 mb-4">
-                <div class="card border-0 shadow-sm rounded position-relative overflow-hidden" style="transition: transform 0.3s ease;">
-                    <img src="{% static 'css/image/room2.jpg' %}" class="card-img-top" alt="room2">
-                    <div class="card-body">
-                        <h5 class="card-title">Dual-Occupancy Room</h5>
-                        <p class="card-text">Spacious room ideal for two, equipped with modern facilities for a comfortable stay.</p>
-                        <a href="#" class="btn btn-primary" style="background-color: #8E235C; border-color: #8E235C;">Inquire Now</a>
+            <div class="col-lg-6">
+                <div class="row g-3">
+                    <div class="col-6 text-end">
+                        <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.1s" src="static/img/carousel-1.jpg" style="margin-top: 25%;">
                     </div>
-                    <div class="card-overlay position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-0 d-flex align-items-center justify-content-center text-white" style="transition: opacity 0.3s ease;">
-                        <p class="m-0">Discover the Dual-Occupancy Room</p>
+                    <div class="col-6 text-start">
+                        <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.3s" src="static/img/room-3.jpg">
                     </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card border-0 shadow-sm rounded position-relative overflow-hidden" style="transition: transform 0.3s ease;">
-                    <img src="{% static 'css/image/pg_room1.jpg' %}" class="card-img-top" alt="room3">
-                    <div class="card-body">
-                        <h5 class="card-title">Triple-Occupancy Room</h5>
-                        <p class="card-text">A cozy room for three, featuring comfortable furnishings and ample space.</p>
-                        <a href="#" class="btn btn-primary" style="background-color: #8E235C; border-color: #8E235C;">Inquire Now</a>
+                    <div class="col-6 text-end">
+                        <img class="img-fluid rounded w-50 wow zoomIn" data-wow-delay="0.5s" src="static/img/room-1.jpg">
                     </div>
-                    <div class="card-overlay position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-0 d-flex align-items-center justify-content-center text-white" style="transition: opacity 0.3s ease;">
-                        <p class="m-0">View the Triple-Occupancy Room</p>
+                    <div class="col-6 text-start">
+                        <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.7s" src="static/img/carousel-2.jpg">
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
+<!-- About End -->
 
-    <style>
-        .card:hover .card-img-top {
-            transform: scale(1.1);
-        }
-
-        .card:hover .card-overlay {
-            opacity: 0.8;
-        }
-
-        .card-overlay {
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .card-img-top {
-            transition: transform 0.3s ease;
-        }
-
-        .card {
-            position: relative;
-        }
-
-        .card-overlay {
-            background: rgba(0, 0, 0, 0.6);
-            color: #fff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            transition: opacity 0.3s ease;
-        }
-    </style>
-</section>
-
-<section id='facilities' class="facilities py-5 bg-light">
+<div class="container-xxl py-5">
     <div class="container">
-        <div class="text-center mb-4">
-            <h1 class="text-white" style="background-color: #8E235C; padding: 10px; border-radius: 5px;">Facilities</h1>
-            <hr class="w-25 m-auto" style="border-top: 2px solid #8E235C;">
+        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+            <h6 class="section-title text-center text-uppercase" style="color: #FD7792;">Our Rooms</h6>
+            <h1 class="mb-5">Explore Our <span class="text-uppercase" style="color: #FD7792;">Rooms</span></h1>
         </div>
-        <div class="row">
-            <div class="col-sm-6 col-md-3 mb-4 d-flex">
-                <div class="card facility-card">
-                    <div class="card-body text-center">
-                        <i class="material-symbols-outlined">water_drop</i>
-                        <h5 class="card-title">RO Water</h5>
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="room-item shadow rounded overflow-hidden">
+                    <div class="position-relative">
+                        <img class="img-fluid" src="static/img/room-1.jpg" alt="">
+
+                    </div>
+                    <div class="p-4 mt-2">
+                        <div class="d-flex justify-content-between mb-3">
+                            <h5 class="mb-0">Single Occupancy Room</h5>
+                            <div class="ps-2">
+                                <small class="fa fa-star" style="color: #FD7792;"></small>
+                                <small class="fa fa-star" style="color: #FD7792;"></small>
+                                <small class="fa fa-star" style="color: #FD7792;"></small>
+                                <small class="fa fa-star" style="color: #FD7792;"></small>
+                                <small class="fa fa-star" style="color: #FD7792;"></small>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-3">
+                            <small class="border-end me-3 pe-3"><i class="fa fa-bed me-2" style="color: #FD7792;"></i>1 Bed</small>
+                            <small class="border-end me-3 pe-3"><i class="fa fa-bath me-2" style="color: #FD7792;"></i>1 Bath</small>
+                            <small><i class="fa fa-wifi me-2" style="color: #FD7792;"></i>Wifi</small>
+                        </div>
+                        <p class="text-body mb-3">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
+                        <div class="d-flex justify-content-between">
+                            <a class="btn btn-sm rounded py-2 px-4" href="" style="background-color: #FD7792; border-color: #FD7792;color:#ffff">View Detail</a>
+                            <a class="btn btn-sm btn-dark rounded py-2 px-4" href="">Book Now</a>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6 col-md-3 mb-4 d-flex">
-                <div class="card facility-card">
-                    <div class="card-body text-center">
-                        <i class="material-symbols-outlined">king_bed</i>
-                        <h5 class="card-title">Bed</h5>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="room-item shadow rounded overflow-hidden">
+                    <div class="position-relative">
+                        <img class="img-fluid" src="static/img/room-2.jpg" alt="">
+
+                    </div>
+                    <div class="p-4 mt-2">
+                        <div class="d-flex justify-content-between mb-3">
+                            <h5 class="mb-0">Double Occupancy Room </h5>
+                            <div class="ps-2">
+                                <small class="fa fa-star" style="color: #FD7792;"></small>
+                                <small class="fa fa-star" style="color: #FD7792;"></small>
+                                <small class="fa fa-star" style="color: #FD7792;"></small>
+                                <small class="fa fa-star" style="color: #FD7792;"></small>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-3">
+                            <small class="border-end me-3 pe-3"><i class="fa fa-bed me-2" style="color: #FD7792;"></i>2 Bed</small>
+                            <small class="border-end me-3 pe-3"><i class="fa fa-bath me-2" style="color: #FD7792;"></i>1 Bath</small>
+                            <small><i class="fa fa-wifi me-2" style="color: #FD7792;"></i>Wifi</small>
+                        </div>
+                        <p class="text-body mb-3">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
+                        <div class="d-flex justify-content-between">
+                            <a class="btn btn-sm rounded py-2 px-4" href="" style="background-color: #FD7792; border-color: #FD7792 ;color:#ffff">View Detail</a>
+                            <a class="btn btn-sm btn-dark rounded py-2 px-4" href="">Book Now</a>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6 col-md-3 mb-4 d-flex">
-                <div class="card facility-card">
-                    <div class="card-body text-center">
-                        <i class="material-symbols-outlined">water_heater</i>
-                        <h5 class="card-title">Solar Panel</h5>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+                <div class="room-item shadow rounded overflow-hidden">
+                    <div class="position-relative">
+                        <img class="img-fluid" src="static/img/room-3.jpg" alt="">
+
                     </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-3 mb-4 d-flex">
-                <div class="card facility-card">
-                    <div class="card-body text-center">
-                        <i class="material-symbols-outlined">kitchen</i>
-                        <h5 class="card-title">Fridge</h5>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-6 col-md-3 mb-4 d-flex">
-                <div class="card facility-card">
-                    <div class="card-body text-center">
-                        <i class="material-symbols-outlined">cooking</i>
-                        <h5 class="card-title">Gas</h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-3 mb-4 d-flex">
-                <div class="card facility-card">
-                    <div class="card-body text-center">
-                        <i class="material-symbols-outlined">laundry_service</i>
-                        <h5 class="card-title">Washing Machine</h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-3 mb-4 d-flex">
-                <div class="card facility-card">
-                    <div class="card-body text-center">
-                        <i class="material-symbols-outlined">wifi</i>
-                        <h5 class="card-title">Wi-Fi</h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-3 mb-4 d-flex">
-                <div class="card facility-card">
-                    <div class="card-body text-center">
-                        <i class="material-symbols-outlined">tv</i>
-                        <h5 class="card-title">Television</h5>
+                    <div class="p-4 mt-2">
+                        <div class="d-flex justify-content-between mb-3">
+                            <h5 class="mb-0">Triple Occupancy Room</h5>
+                            <div class="ps-2">
+                                <small class="fa fa-star" style="color: #FD7792;"></small>
+                                <small class="fa fa-star" style="color: #FD7792;"></small>
+                                <small class="fa fa-star" style="color: #FD7792;"></small>
+                                <small class="fa fa-star" style="color: #FD7792;"></small>
+                                <small class="fa fa-star" style="color: #FD7792;"></small>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-3">
+                            <small class="border-end me-3 pe-3"><i class="fa fa-bed me-2" style="color: #FD7792; "></i>3 Bed</small>
+                            <small class="border-end me-3 pe-3"><i class="fa fa-bath me-2" style="color: #FD7792;"></i>1 Bath</small>
+                            <small><i class="fa fa-wifi me-2" style="color: #FD7792;"></i>Wifi</small>
+                        </div>
+                        <p class="text-body mb-3">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
+                        <div class="d-flex justify-content-between">
+                            <a class="btn btn-sm rounded py-2 px-4" href="" style="background-color: #FD7792; border-color: #FD7792; color:#ffff">View Detail</a>
+                            <a class="btn btn-sm btn-dark rounded py-2 px-4" href="">Book Now</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
+<!-- Room End -->
 
-    <style>
-        .facility-card {
-            background-color: #ffffff;
-            border: 1px solid #e0e0e0;
-            border-radius: 10px;
-            width: 100%;
-            max-width: 250px; /* Set maximum width */
-            height: 250px; /* Fixed height */
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .facility-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        }
-
-        .facility-card .card-body i {
-            font-size: 30px;
-            color: #8E235C;
-            margin-top:40px;
-        }
-
-        .facility-card .card-title {
-            font-size: 16px;
-            font-weight: 600;
-            color: #333;
-            margin-top:50px; /* Remove default margin */
-        }
-
-        .card-body {
-            padding: 20px;
-            text-align: center;
-        }
-    </style>
-</section>
-
-<section id='pricing' class="pricing py-1">
+<!-- Service Start -->
+<div class="container-xxl py-5">
     <div class="container">
-        <div class="text-center mb-4">
-            <h1 class="text-white" style="background-color: #8E235C; padding: 5px;">Pricing</h1>
-            <hr class="w-25 m-auto">
+        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+            <h6 class="section-title text-center  text-uppercase" style="color: #FD7792;">Our Services</h6>
+            <h1 class="mb-5">Explore Our <span class=" text-uppercase" style="color: #FD7792;">Services</span></h1>
         </div>
-        <div class="row">
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Single-Occupancy Room</h5>
-                        <ul class="list-group">
-                            <li class="list-group-item">1 Year: $12,000</li>
-                            <li class="list-group-item">6 Months: $6,500</li>
-                            <li class="list-group-item">3 Months: $3,500</li>
-                            <li class="list-group-item">1 Month: $1,200</li>
-                        </ul>
-                        <a href="#" class="btn btn-primary mt-3" style="background-color: #8E235C; border-color: #8E235C;">Inquire Now</a>
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <a class="service-item rounded" href="">
+                    <div class="service-icon bg-transparent border rounded p-1">
+                        <div class="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
+                            <i class="#" style="color: #FD7792;"></i>
+                        </div>
+                    </div>
+                    <h5 class="mb-3">Stove</h5>
+                    <p class="text-body mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                <a class="service-item rounded" href="">
+                    <div class="service-icon bg-transparent border rounded p-1">
+                        <div class="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
+                            <i class="#" style="color: #FD7792;"></i>
+                        </div>
+                    </div>
+                    <h5 class="mb-3">WIFI</h5>
+                    <p class="text-body mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <a class="service-item rounded" href="">
+                    <div class="service-icon bg-transparent border rounded p-1">
+                        <div class="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
+                            <i class='bx bx-wifi' style="color: #FD7792;"></i>
+                        </div>
+                    </div>
+                    <h5 class="mb-3">Security</h5>
+                    <p class="text-body mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                <a class="service-item rounded" href="">
+                    <div class="service-icon bg-transparent border rounded p-1">
+                        <div class="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
+                            <i class="#" style="color: #FD7792;"></i>
+                        </div>
+                    </div>
+                    <h5 class="mb-3">Washing Machin</h5>
+                    <p class="text-body mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <a class="service-item rounded" href="">
+                    <div class="service-icon bg-transparent border rounded p-1">
+                        <div class="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
+                            <i class="#" style="color: #FD7792;"></i>
+                        </div>
+                    </div>
+                    <h5 class="mb-3">RO</h5>
+                    <p class="text-body mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+                <a class="service-item rounded" href="">
+                    <div class="service-icon bg-transparent border rounded p-1">
+                        <div class="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
+                            <i class="#" style="color: #FD7792;"></i>
+                        </div>
+                    </div>
+                    <h5 class="mb-3">Cleaning</h5>
+                    <p class="text-body mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Service End -->
+
+
+ <!-- Testimonial Start -->
+        <div class="container-xxl testimonial my-5 py-5 bg-dark wow zoomIn" data-wow-delay="0.1s">
+            <div class="container">
+                <div class="owl-carousel testimonial-carousel py-5">
+                    <div class="testimonial-item position-relative bg-white rounded overflow-hidden">
+                        <p>Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet diam stet. Est stet ea lorem amet est kasd kasd et erat magna eos</p>
+                        <div class="d-flex align-items-center">
+                            <img class="img-fluid flex-shrink-0 rounded" src="static/img/testimonial-1.jpg" style="width: 45px; height: 45px;">
+                            <div class="ps-3">
+                                <h6 class="fw-bold mb-1">Client Name</h6>
+                                <small>Profession</small>
+                            </div>
+                        </div>
+                        <i class="fa fa-quote-right fa-3x text-primary position-absolute end-0 bottom-0 me-4 mb-n1"></i>
+                    </div>
+                    <div class="testimonial-item position-relative bg-white rounded overflow-hidden">
+                        <p>Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet diam stet. Est stet ea lorem amet est kasd kasd et erat magna eos</p>
+                        <div class="d-flex align-items-center">
+                            <img class="img-fluid flex-shrink-0 rounded" src="static/img/testimonial-2.jpg" style="width: 45px; height: 45px;">
+                            <div class="ps-3">
+                                <h6 class="fw-bold mb-1">Client Name</h6>
+                                <small>Profession</small>
+                            </div>
+                        </div>
+                        <i class="fa fa-quote-right fa-3x text-primary position-absolute end-0 bottom-0 me-4 mb-n1"></i>
+                    </div>
+                    <div class="testimonial-item position-relative bg-white rounded overflow-hidden">
+                        <p>Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet diam stet. Est stet ea lorem amet est kasd kasd et erat magna eos</p>
+                        <div class="d-flex align-items-center">
+                            <img class="img-fluid flex-shrink-0 rounded" src="static/img/testimonial-3.jpg" style="width: 45px; height: 45px;">
+                            <div class="ps-3">
+                                <h6 class="fw-bold mb-1">Client Name</h6>
+                                <small>Profession</small>
+                            </div>
+                        </div>
+                        <i class="fa fa-quote-right fa-3x text-primary position-absolute end-0 bottom-0 me-4 mb-n1"></i>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Dual-Occupancy Room</h5>
-                        <ul class="list-group">
-                            <li class="list-group-item">1 Year: $20,000</li>
-                            <li class="list-group-item">6 Months: $10,500</li>
-                            <li class="list-group-item">3 Months: $6,000</li>
-                            <li class="list-group-item">1 Month: $2,000</li>
-                        </ul>
-                        <a href="#" class="btn btn-primary mt-3" style="background-color: #8E235C; border-color: #8E235C;">Inquire Now</a>
+        </div>
+        <!-- Testimonial End -->
+
+
+        <!-- Team Start -->
+        <div class="container-xxl py-5">
+    <div class="container">
+         <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+             <h6 class="section-title text-center text-uppercase" style="color: #FD7792;">Our Team</h6>
+             <h1 class="mb-5">Explore Our <span class="text-uppercase" style="color: #FD7792;">Staffs</span></h1>
+         </div>
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="rounded shadow overflow-hidden">
+                    <div class="position-relative">
+                        <img class="img-fluid" src="static/img/team-1.jpg" alt="">
+                        <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
+                            <a class="btn btn-square mx-1" href="" style="background-color: #FD7792; border-color: #FD7792;"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-square mx-1" href="" style="background-color: #FD7792; border-color: #FD7792;"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-square mx-1" href="" style="background-color: #FD7792; border-color: #FD7792;"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="text-center p-4 mt-3">
+                        <h5 class="fw-bold mb-0">Full Name</h5>
+                        <small>Designation</small>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Triple-Occupancy Room</h5>
-                        <ul class="list-group">
-                            <li class="list-group-item">1 Year: $25,000</li>
-                            <li class="list-group-item">6 Months: $13,500</li>
-                            <li class="list-group-item">3 Months: $7,500</li>
-                            <li class="list-group-item">1 Month: $2,500</li>
-                        </ul>
-                        <a href="#" class="btn btn-primary mt-3" style="background-color: #8E235C; border-color: #8E235C;">Inquire Now</a>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="rounded shadow overflow-hidden">
+                    <div class="position-relative">
+                        <img class="img-fluid" src="static/img/team-2.jpg" alt="">
+                        <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
+                            <a class="btn btn-square mx-1" href="" style="background-color: #FD7792; border-color: #FD7792;"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-square mx-1" href="" style="background-color: #FD7792; border-color: #FD7792;"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-square mx-1" href="" style="background-color: #FD7792; border-color: #FD7792;"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="text-center p-4 mt-3">
+                        <h5 class="fw-bold mb-0">Full Name</h5>
+                        <small>Designation</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="rounded shadow overflow-hidden">
+                    <div class="position-relative">
+                        <img class="img-fluid" src="static/img/team-3.jpg" alt="">
+                        <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
+                            <a class="btn btn-square mx-1" href="" style="background-color: #FD7792; border-color: #FD7792;"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-square mx-1" href="" style="background-color: #FD7792; border-color: #FD7792;"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-square mx-1" href="" style="background-color: #FD7792; border-color: #FD7792;"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="text-center p-4 mt-3">
+                        <h5 class="fw-bold mb-0">Full Name</h5>
+                        <small>Designation</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                <div class="rounded shadow overflow-hidden">
+                    <div class="position-relative">
+                        <img class="img-fluid" src="static/img/team-1.jpg" alt="">
+                        <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
+                            <a class="btn btn-square mx-1" href="" style="background-color: #FD7792; border-color: #FD7792;"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-square mx-1" href="" style="background-color: #FD7792; border-color: #FD7792;"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-square mx-1" href="" style="background-color: #FD7792; border-color: #FD7792;"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="text-center p-4 mt-3">
+                        <h5 class="fw-bold mb-0">Full Name</h5>
+                        <small>Designation</small>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</section>
+</div>
+<!-- Team End -->
+ <!-- Contact Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                 <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h6 class="section-title text-center text-uppercase" style="color: #FD7792;">Contact Us</h6>
+                    <h1 class="mb-5">Contact <span class="text-uppercase" style="color: #FD7792;">For Any Query</span></h1>
+                </div>
+                <hr>
+                <div class="row g-4">
+                    <div class="col-12">
+                        <div class="row gy-4">
+                            <div class="col-md-4">
+                                <h6 class="section-title text-start  text-uppercase" style="color: #FD7792;">Booking</h6>
+                                <p><i class="fa fa-envelope-open  me-2" style="color: #FD7792;"></i>book@example.com</p>
+                            </div>
+                            <div class="col-md-4">
+                                <h6 class="section-title text-start text-uppercase" style="color: #FD7792;">General</h6>
+                                <p><i class="fa fa-envelope-open  me-2" style="color: #FD7792;"></i>info@example.com</p>
+                            </div>
+                            <div class="col-md-4">
+                                <h6 class="section-title text-start text-uppercase" style="color: #FD7792;">Technical</h6>
+                                <p><i class="fa fa-envelope-open  me-2" style="color: #FD7792;"></i>tech@example.com</p>
+                            </div>
+                        </div>
+                    </div>
 
-<section id='testimonials' class="testimonials py-5 bg-light">
-    <div class="container">
-        <div class="text-center mb-4">
-            <h1 class="text-white" style="background-color: #8E235C; padding: 10px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">Testimonials</h1>
-            <hr class="w-25 m-auto" style="border-color: #8E235C;">
-        </div>
-        <div class="row">
-            <!-- Testimonial 1 -->
-            <div class="col-md-4 mb-4">
-                <div class="card testimonial-card" style="background: linear-gradient(to bottom right, #C88F9C, #8E235C); border: none; border-radius: 20px; transition: transform 0.3s, box-shadow 0.3s;">
-                    <div class="card-body text-center">
-                        <blockquote class="blockquote">
-                            <p class="mb-0" style="font-style: italic; color: #fff;">"This is a fantastic place to stay! Highly recommended."</p>
-                            <footer class="blockquote-footer mt-3" style="font-weight: bold; color: #fff;">
-                                John Doe
-                            </footer>
-                        </blockquote>
+                    <div class="col-md-6 wow fadeIn" data-wow-delay="0.1s">
+                        <iframe class="position-relative rounded w-100 h-100"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001156.4288297426!2d-78.01371936852176!3d42.72876761954724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sbd!4v1603794290143!5m2!1sen!2sbd"
+                            frameborder="0" style="min-height: 350px; border:0;" allowfullscreen="" aria-hidden="false"
+                            tabindex="0"></iframe>
                     </div>
-                    <div class="card-footer text-center" style="background-color: transparent; border-top: none;">
-                        <p style="color: #fff; font-weight: bold;">Rating: ★★★★★</p>
-                    </div>
-                </div>
-            </div>
-            <!-- Testimonial 2 -->
-            <div class="col-md-4 mb-4">
-                <div class="card testimonial-card" style="background: linear-gradient(to bottom right, #F3A8A0, #8E235C); border: none; border-radius: 20px; transition: transform 0.3s, box-shadow 0.3s;">
-                    <div class="card-body text-center">
-                        <blockquote class="blockquote">
-                            <p class="mb-0" style="font-style: italic; color: #fff;">"Amazing experience, great facilities, and friendly staff."</p>
-                            <footer class="blockquote-footer mt-3" style="font-weight: bold; color: #fff;">
-                                Jane Smith
-                            </footer>
-                        </blockquote>
-                    </div>
-                    <div class="card-footer text-center" style="background-color: transparent; border-top: none;">
-                        <p style="color: #fff; font-weight: bold;">Rating: ★★★★☆</p>
-                    </div>
-                </div>
-            </div>
-            <!-- Testimonial 3 -->
-            <div class="col-md-4 mb-4">
-                <div class="card testimonial-card" style="background: linear-gradient(to bottom right, #E5A7B2, #8E235C); border: none; border-radius: 20px; transition: transform 0.3s, box-shadow 0.3s;">
-                    <div class="card-body text-center">
-                        <blockquote class="blockquote">
-                            <p class="mb-0" style="font-style: italic; color: #fff;">"I enjoyed my stay here very much. The rooms are cozy and clean."</p>
-                            <footer class="blockquote-footer mt-3" style="font-weight: bold; color: #fff;">
-                                Robert Brown
-                            </footer>
-                        </blockquote>
-                    </div>
-                    <div class="card-footer text-center" style="background-color: transparent; border-top: none;">
-                        <p style="color: #fff; font-weight: bold;">Rating: ★★★★☆</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Add some custom CSS for hover effects -->
-<style>
-.testimonial-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-}
-</style>
-
-
-<section id='about' class="about py-5 mt-0">
-    <div class="container">
-        <div class="text-center mb-4">
-            <h1 class="text-white" style="background-color: #8E235C; padding: 10px 20px; border-radius: 5px;">About Us</h1>
-            <hr class="w-25 m-auto" style="border-top: 2px solid #8E235C;">
-        </div>
-        <div class="row">
-            <div class="col-md-6 mb-4">
-                <p class="text-muted" style="font-size: 18px; line-height: 1.6;">
-                    We are a premium accommodation provider offering top-notch facilities and services to our guests. Our rooms are designed to provide maximum comfort and convenience. We take pride in our excellent customer service and strive to make your stay a memorable experience.
-                </p>
-            </div>
-            <div class="col-md-6 mb-4">
-                <img src="{% static 'css/image/room1.jpg' %}" class="img-fluid rounded shadow" alt="about us" style="border: 2px solid #8E235C;">
-            </div>
-        </div>
-    </div>
-    <section class="faq mt-2">
-        <div class="container">
-            <div class="text-center mb-4">
-                <h2 style="color: #8E235C; font-size: 24px;">What do you <span class="text-primary">want to know?</span></h2>
-                <hr class="w-50 m-auto" style="border-top: 2px solid #8E235C;">
-            </div>
-            <div class="accordion mt-4" id="accordionExample">
-                <div class="accordion-item mb-3">
-                    <h2 class="accordion-header" id="headingOne">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="background-color: #f7f7f7; border: 1px solid #ddd; color: #333;">
-                            What are the opening and closing hours of the PG?
-                        </button>
-                    </h2>
-                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                        <div class="accordion-body" style="background-color: #fff; color: #555;">
-                            The PG operates from 6:00 AM to 10:30 PM.
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item mb-3">
-                    <h2 class="accordion-header" id="headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="background-color: #f7f7f7; border: 1px solid #ddd; color: #333;">
-                            Are guests or friends allowed to visit?
-                        </button>
-                    </h2>
-                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                        <div class="accordion-body" style="background-color: #fff; color: #555;">
-                            No, visitors are not allowed in the PG premises for security reasons.
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item mb-3">
-                    <h2 class="accordion-header" id="headingThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style="background-color: #f7f7f7; border: 1px solid #ddd; color: #333;">
-                            Until when should the rent be paid for the PG?
-                        </button>
-                    </h2>
-                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                        <div class="accordion-body" style="background-color: #fff; color: #555;">
-                            Rent is due from the start of the month until the 5th of the month.
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item mb-3">
-                    <h2 class="accordion-header" id="headingFour">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour" style="background-color: #f7f7f7; border: 1px solid #ddd; color: #333;">
-                            Do you have a helpline number for future inquiries?
-                        </button>
-                    </h2>
-                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
-                        <div class="accordion-body" style="background-color: #fff; color: #555;">
-                            Yes, you can contact us at the following numbers:
-                            <ul>
-                                <li>Sally - +91 98765 43210</li>
-                                <li>Emily - +91 87654 32109</li>
-                                <li>Jessica - +91 76543 21098</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item mb-3">
-                    <h2 class="accordion-header" id="headingFive">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive" style="background-color: #f7f7f7; border: 1px solid #ddd; color: #333;">
-                            What documents are required for taking admission in the PG?
-                        </button>
-                    </h2>
-                    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
-                        <div class="accordion-body" style="background-color: #fff; color: #555;">
-                            To take admission in our PG, you will need to provide a copy of your:
-                            <ul>
-                                <li>Aadhar card</li>
-                                <li>Passport-size photographs</li>
-                                <li>College or workplace ID</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item mb-3">
-                    <h2 class="accordion-header" id="headingSix">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix" style="background-color: #f7f7f7; border: 1px solid #ddd; color: #333;">
-                            Can we pay the fee online?
-                        </button>
-                    </h2>
-                    <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
-                        <div class="accordion-body" style="background-color: #fff; color: #555;">
-                            Yes, we offer online payment options for your convenience. You can pay your fees securely through our website portal.
+                    <div class="col-md-6">
+                        <div class="wow fadeInUp" data-wow-delay="0.2s">
+                            <form>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="name" placeholder="Your Name">
+                                            <label for="name">Your Name</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="email" class="form-control" id="email" placeholder="Your Email">
+                                            <label for="email">Your Email</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="subject" placeholder="Subject">
+                                            <label for="subject">Subject</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                            <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 150px"></textarea>
+                                            <label for="message">Message</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <button class="btn btn-primary w-100 py-3"style="background-color: #fd7792; border-color: #FD7792;"  type="submit">Send Message</button>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-</section>
-
-
-<section id='contact' class="contact py-5" style="background-color: #f8f9fa;">
-    <div class="container">
-        <div class="text-center mb-4">
-            <h1 class="text-white" style="background-color: #8E235C; padding: 10px 20px; border-radius: 5px;">Contact Us</h1>
-            <hr class="w-25 m-auto" style="border-top: 2px solid #8E235C;">
-        </div>
-        <div class="row">
-            <div class="col-md-6 mb-4">
-                <form>
-                    <div class="mb-3">
-                        <label for="name" class="form-label" style="font-weight: bold;">Name</label>
-                        <input type="text" class="form-control border-0 shadow-sm rounded" id="name" placeholder="Enter your name">
-                    </div>
-                    <div class="mb-3">
-                        <label for="email" class="form-label" style="font-weight: bold;">Email</label>
-                        <input type="email" class="form-control border-0 shadow-sm rounded" id="email" placeholder="Enter your email">
-                    </div>
-                    <div class="mb-3">
-                        <label for="message" class="form-label" style="font-weight: bold;">Message</label>
-                        <textarea class="form-control border-0 shadow-sm rounded" id="message" rows="4" placeholder="Enter your message"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary" style="background-color: #8E235C; border-color: #8E235C; border-radius: 25px; padding: 10px 20px;">Submit</button>
-                </form>
-            </div>
-            <div class="col-md-6 mb-4">
-                <div class="bg-white p-4 rounded shadow-sm">
-                    <p>If you have any questions or need further information, feel free to contact us. We are here to help you and ensure you have a pleasant experience.</p>
-                    <p><strong>Address:</strong> 123 Main Street, Anytown, USA</p>
-                    <p><strong>Phone:</strong> +1 (123) 456-7890</p>
-                    <p><strong>Email:</strong> info@mywebsite.com</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+        <!-- Contact End -->
 
 {% endblock %}

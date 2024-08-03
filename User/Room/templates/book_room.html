@@ -2,19 +2,28 @@
 {% block breadcrumb_items %}
     <!-- Add specific breadcrumb items for this page -->
     <li class="breadcrumb-item"><a href="{% url 'room_list' %}">Room List</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Book_Room</li>
+    <li class="breadcrumb-item active" aria-current="page">Book Room</li>
 {% endblock %}
+
 {% block content %}
-<div style="display: flex; justify-content: center; align-items: center; min-height: calc(100vh - 160px); padding: 20px; background-color: #f4f4f4; font-family: 'Roboto', sans-serif; margin-top: 80px; margin-bottom: 80px;">
-    <div style="max-width: 600px; width: 100%; padding: 40px; border: 1px solid #ddd; border-radius: 12px; background-color: #ffffff; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);">
-        <h2 style="text-align: center; color: #8E235C; margin-bottom: 30px; font-size: 24px;">Book Room {{ room.room_number }}</h2>
-        <form method="post" style="display: flex; flex-direction: column; gap: 20px;">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <div style="text-align: center;">
-                <button type="submit" style="padding: 14px 28px; background-color: #8E235C; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 18px; font-weight: bold; transition: background-color 0.3s ease, box-shadow 0.3s ease; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">Submit</button>
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+            <h6 class="section-title text-center text-uppercase" style="color: #FD7792;">Room Booking</h6>
+            <h1 class="mb-5">Book A <span class="text-uppercase" style="color: #FD7792;">Luxury Room</span></h1>
+        </div>
+        <div style="display: flex; justify-content: center; align-items: center; min-height: calc(100vh - 160px); padding: 20px; background-color: #f4f4f4; font-family: 'Roboto', sans-serif; margin-top: 80px; margin-bottom: 80px;">
+            <div style="max-width: 600px; width: 100%; padding: 40px; border: 1px solid #ddd; border-radius: 12px; background-color: box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);">
+                <h2 style="text-align: center; color: #FD7792; margin-bottom: 30px; font-size: 24px;">Book Room {{ room.room_number }}</h2>
+                <form method="post" style="display: flex; flex-direction: column; gap: 20px;">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <div style="text-align: center;">
+                        <button type="submit" style="padding: 14px 28px; background-color: #FD7792; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 18px; font-weight: bold; transition: background-color 0.3s ease, box-shadow 0.3s ease; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">Submit</button>
+                    </div>
+                </form>
             </div>
-        </form>
+        </div>
     </div>
 </div>
 {% endblock %}

@@ -3,51 +3,47 @@
 {% load static %}
 
 {% block content %}
-    <div class="container">
-        <div class="login-container">
-            <h2 class="login-header">Register</h2>
-            <form method="post" class="login-form">
-                {% csrf_token %}
-                <div class="form-group">
-                    <label for="{{ form.username.id_for_label }}">Username:</label>
-                    {{ form.username }}
-                </div>
-                <div class="form-group">
-                    <label for="{{ form.email.id_for_label }}">Email:</label>
-                    {{ form.email }}
-                </div>
-                <div class="form-group">
-                    <label for="{{ form.password1.id_for_label }}">Password:</label>
-                    {{ form.password1 }}
-                </div>
-                <div class="form-group">
-                    <label for="{{ form.password2.id_for_label }}">Confirm Password:</label>
-                    {{ form.password2 }}
-                </div>
-                <div class="text-center">
-                    <button type="submit" class="btn-custom">Register</button>
-                </div>
-            </form>
-            <p class="register-link">Already have an account? <a href="{% url 'login' %}">Login here</a></p>
-        </div>
+    <div class="register-container">
+        <h2 class="register-header">Create Your Account</h2>
+        <form method="post" class="register-form">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="{{ form.username.id_for_label }}">Username</label>
+                {{ form.username }}
+            </div>
+            <div class="form-group">
+                <label for="{{ form.email.id_for_label }}">Email Address</label>
+                {{ form.email }}
+            </div>
+            <div class="form-group">
+                <label for="{{ form.password1.id_for_label }}">Password</label>
+                {{ form.password1 }}
+            </div>
+            <div class="form-group">
+                <label for="{{ form.password2.id_for_label }}">Confirm Password</label>
+                {{ form.password2 }}
+            </div>
+            <div class="form-group text-center">
+                <button type="submit" class="btn-custom">Register</button>
+            </div>
+        </form>
+        <p class="register-link">Already have an account? <a href="{% url 'login' %}">Login here</a></p>
     </div>
 {% endblock %}
 
 {% block style %}
 <style>
-    .login-container {
-        max-width: 500px;
-        margin: 50px auto;
+    .register-container {
+        max-width: 360px;
+        margin: 5% auto;
         padding: 30px;
-        background-color: #fff;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        background-color: #ffffff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         border-radius: 8px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        border: 1px solid #e0e0e0;
     }
 
-    .login-header {
+    .register-header {
         font-size: 24px;
         font-weight: bold;
         margin-bottom: 20px;
@@ -55,37 +51,46 @@
         color: #8E235C;
     }
 
-    .login-form {
+    .register-form {
         width: 100%;
     }
 
     .form-group {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
         margin-bottom: 20px;
     }
 
     .form-group label {
+        display: block;
         font-weight: bold;
-        margin-bottom: 5px;
-        text-align: center;
-        width: 100%;
+        margin-bottom: 8px;
+        color: #333;
     }
 
     .form-control {
-        border-radius: 20px;
-        text-align: center;
-        width: 80%;
+        border-radius: 5px;
+        padding: 12px;
+        border: 1px solid #ccc;
+        width: 100%;
+        box-sizing: border-box;
+        font-size: 14px;
+        transition: border-color 0.3s ease;
+    }
+
+    .form-control:focus {
+        border-color: #8E235C;
+        outline: none;
     }
 
     .btn-custom {
         background-color: #8E235C;
-        color: #fff;
-        border-radius: 20px;
-        padding: 10px 20px;
+        color: #ffffff;
+        border-radius: 5px;
+        padding: 12px;
         width: 100%;
+        border: none;
+        font-size: 14px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
     }
 
     .btn-custom:hover {
@@ -93,14 +98,14 @@
     }
 
     .register-link {
-        display: block;
-        text-align: center;
         margin-top: 20px;
+        text-align: center;
     }
 
     .register-link a {
         color: #8E235C;
         text-decoration: none;
+        font-weight: bold;
     }
 
     .register-link a:hover {
