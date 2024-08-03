@@ -165,3 +165,11 @@ DEBUG = True
 # STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # DEBUG = False
 
+# Email settings
+DEBUG = True
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'akankshamarathe19@gmail.com'
+EMAIL_HOST_PASSWORD = 'chav vwhz xjsq hudb'

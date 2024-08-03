@@ -534,3 +534,16 @@ body {
   text-decoration: underline;
 }
 
+/* Add this CSS to your stylesheet */
+.popup-message {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: black;  /* Black text color */
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 1000;
+    display: none;
+    font-size: 16px;  /* Adjust font size if needed */
+}

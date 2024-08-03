@@ -7,6 +7,9 @@ from django.shortcuts import render, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from .models import Profile
 from django.contrib import messages
+from django.core.mail import send_mail
+from django.http import JsonResponse
+from .models import Subscription
 
 
 def register(request):
@@ -99,3 +102,22 @@ def contact(request):
 def service(request):
     return render(request, 'service.html')
 
+
+
+def subscribe(request):
+    if request.method == 'POST':
+        email = request.POST.get('email')
+        if email:
+            Subscription.objects.get_or_create(email=email)
+
+            send_mail(
+                'New Subscription',
+                f'A new subscription request has been received from {email}.',
+                'akankshamarathe19@gmail.com',
+                ['akankshamarathe19@gmail.com'],
+                fail_silently=False,
+            )
+
+            return JsonResponse({'status': 'success', 'message': 'Subscription successful.'})
+        return JsonResponse({'status': 'error', 'message': 'Email not provided.'}, status=400)
+    return JsonResponse({'status': 'error', 'message': 'Invalid request method.'}, status=405)

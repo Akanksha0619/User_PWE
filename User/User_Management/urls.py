@@ -13,6 +13,7 @@ urlpatterns = [
     path('profile/', profile, name='profile'),
     path('profile/update/', update_profile, name='update_profile'),
     path('logout/', logout, name='logout'),
+    path('subscribe/', subscribe, name='subscribe'),
 
     
 ]

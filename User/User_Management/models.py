@@ -16,3 +16,10 @@ class Profile(models.Model):
     
     def __str__(self):
         return self.user.username
+
+
+class Subscription(models.Model):
+    email = models.EmailField(unique=True)
+
+    def __str__(self):
+        return self.email

@@ -140,10 +140,14 @@
                 <div class="col-lg-4 footer-subscribe">
                     <h3 style="color: white;">Subscribe</h3>
                     <p>Subscribe to get our latest updates and offers.</p>
-                    <form action="#">
-                        <input type="email" name="email" placeholder="Enter your email">
+                  <form id="subscription-form" method="post">
+                        {% csrf_token %}
+                        <input type="email" name="email" placeholder="Enter your email" required>
                         <button type="submit"><i class="fas fa-paper-plane"></i> Subscribe</button>
+                        <div id="response-message" class="popup-message" style="display: none;"></div>
                     </form>
+
+
                     <div class="social-links mt-4">
                         <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
@@ -186,6 +190,37 @@
     <script src="{% static 'lib/tempusdominus/js/moment-timezone.min.js' %}"></script>
     <script src="{% static 'lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js' %}"></script>
     <script src="{% static 'js/main.js' %}"></script>
+   <script>
+document.getElementById('subscription-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    var formData = new FormData(this);
+
+    fetch('{% url "subscribe" %}', {
+        method: 'POST',
+        body: formData,
+        headers: {
+            'X-Requested-With': 'XMLHttpRequest',
+            'X-CSRFToken': formData.get('csrfmiddlewaretoken')
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        var responseMessage = document.getElementById('response-message');
+        responseMessage.textContent = data.message;
+        responseMessage.style.display = 'block';
+
+        // Hide the message after 3 seconds
+        setTimeout(function() {
+            responseMessage.style.display = 'none';
+        }, 3000);
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+});
+</script>
+
 
     {% block extra_js %}
     <!-- Additional JavaScript files or scripts can be added here -->
