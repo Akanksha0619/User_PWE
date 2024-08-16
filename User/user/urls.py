@@ -24,6 +24,7 @@ urlpatterns = [
     path('', include('User_Management.urls')),
     path('post/', include('Post.urls')),
     path('room/', include('Room.urls')),
+    path('chat/', include('chat.urls')),
     # path('ticket/', include('Ticket.urls')),
 ]
 

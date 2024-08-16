@@ -25,23 +25,25 @@ SECRET_KEY = 'django-insecure-ixy$!hu#4m7hl2(6u=%t3j*4&3esh*n3h@h%)^pc9n=de8!a4#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS =  ['6639-2401-4900-1c18-393a-85af-eff0-506c-a7c6.ngrok-free.app' , 'localhost', '127.0.0.1']
+ALLOWED_HOSTS =  ['f2c8-2401-4900-1c18-16fa-1811-ae9f-3167-4de4.ngrok-free.app' , 'localhost', '127.0.0.1']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'daphne',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    
+    'channels',
     'User_Management',
     'Post',
     'Ticket',
     'Room',
+    'chat',
 ]
 
 MIDDLEWARE = [
@@ -73,7 +75,16 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'user.wsgi.application'
-
+ASGI_APPLICATION = 'user.asgi.application'
+# LEARN CHANNELS
+CHANNEL_LAYERS = {
+    "default": {
+        "BACKEND": "channels_redis.core.RedisChannelLayer",
+        "CONFIG": {
+            "hosts": [("127.0.0.1", 6379)],
+        },
+    },
+}
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
@@ -122,9 +133,6 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-# Default primary key field type
-# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
-
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 import os
 from pathlib import Path
@@ -153,12 +161,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = [
-    BASE_DIR / "static",
-]
-
-# During development, ensure DEBUG is set to True
-DEBUG = True
 
 # For production, use a proper static files storage and configuration
 # Example:
@@ -166,7 +168,6 @@ DEBUG = True
 # DEBUG = False
 
 # Email settings
-DEBUG = True
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
